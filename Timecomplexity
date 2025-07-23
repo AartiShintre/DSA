@@ -1,0 +1,52 @@
+package com.RT.P1;
+
+public class timeComplexity {
+	public static void factorial(int n) {
+		// Time : O(n)
+		// Space : input = O(1) , aux = O(1)
+		int fact =1;
+		for(int i = 1; i <= n; i++) {
+			fact = fact * i;
+		}
+		System.out.println("Factorial : "+fact);
+	}
+	public static void displayMatrix(int[][] arr) {
+		// Time : O(n2)
+		// Space : input = O(n2) aux = O(1)
+		int i , j;
+		for(i = 0; i < arr.length ; i++) {
+			for(j = 0; j < arr.length ; j++) {
+				System.out.print(arr[i][j]+" ");
+				}
+			System.out.println();
+		}	
+	}
+	public static void decToBin(int n) {
+		// Time : O(log n)
+		//Space : input = O(1) , aux = O(1)
+		while(n>0) {
+			int r = n % 2;
+			System.out.print(r);
+			n = n / 2;
+		}
+	}
+	public static void printTable(int n) {
+		// Time : O(1)
+		//Space : input = O(1) , aux = O(1)
+		for(int i = 1 ; i <= 10 ; i++ ) {
+			int r = n * i;
+			System.out.println(r);
+		}
+		
+	}
+	
+
+	public static void main(String[] args) {
+		//factorial(5);
+		int [][] arr = {{1,2,3},{4,5,6},{6,7,8}};
+		//displayMatrix(arr);
+		//decToBin(9);
+		printTable(2);
+	}
+
+}
