@@ -1,0 +1,28 @@
+package com.RT.P1;
+
+public class Recursion {
+	public static int factorial(int n) {
+		//base condition 
+		if(n==0) {
+			return 1;
+		}
+		int r = n * factorial(n-1);
+		return r;
+	}
+	public static int power(int x, int y) {
+		//base condition
+		if(y==0) {
+			return 1;
+		}
+		int r = x * power(x , y-1);
+		return r;
+	}
+
+	public static void main(String[] args) {
+		int res = factorial(5);
+		System.out.println("Factorial:"+res);
+		int res2 = power(2,2);
+		System.out.println("Power : "+res2);
+	}
+
+}
